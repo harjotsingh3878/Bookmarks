@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bookmarks_MVC.Models.BookmarkCount>
+
+@{
+    ViewBag.Title = "Bookmarks";
+}
+
+<h2>Bookmarks</h2>
+
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model._address)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model._count)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._tags)
+
+
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item._address)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item._count)
+        </td>
+       <td>
+           @Html.DisplayFor(modelItem => item._tags)
+
+
+       </td>
+    </tr>
+}
+
+</table>

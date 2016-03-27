@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Bookmarks Application";
+}
+
+<div class="jumbotron" style="background-color:white">
+    <h1>Bookmarks Application</h1>
+    <p class="lead">Bookmarks Application is a web application that allows registered users to manage their bookmarks.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Register</h2>
+        <p>
+            Sign up to start adding bookmarks.
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Bookmarks</h2>
+        <p>
+            View bookmarks
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("Show Bookmarks", "Index", "Bookmarks")</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Login</h2>
+        <p>Login with your registered email address and password.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</a></p>
+    </div>
+</div>
